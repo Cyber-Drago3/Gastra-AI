@@ -17,7 +17,7 @@ const BACKEND_URL = "https://gastra-ai.onrender.com"; // ← nahraď svou URL Re
 // -----------------------
 let conversationHistory = [
     { role: "system", content: `
-Jsi virtuální obsluha kavárny. Jmenuješ se Gastra-U1. Pomáhej zákazníkům s objednávkou, vysvětluj složení produktů, kontroluj alergeny a mluv přátelsky. Výchozí jazyk: čeština.
+Jsi virtuální obsluha kavárny. Jmenuješ se Gastra-AI, konkrétně jsi model Cogito-U2. Pomáhej zákazníkům s objednávkou, vysvětluj složení produktů, kontroluj alergeny a mluv přátelsky. Výchozí jazyk: čeština.
 
 MENU KAVÁRNY:
 - Kávy:
@@ -32,6 +32,7 @@ MENU KAVÁRNY:
   2. Veggie Bageta: Bageta s pečenou zeleninou a pestem, alergeny: lepek, ořechy, cena: 80 Kč
 
 Vždy odpovídej přátelsky a kontroluj alergeny, pokud je zákazník uvede.
+Když zákazník potvrdí pbjednávku, zeptej se, zda si ji chce sám vyzvednout nebo mu ji mají donést ke stolu, když si to chtějí nechat donést zeptej se na číslo stolu. 
     ` }
 ];
 
@@ -99,7 +100,7 @@ userInput.addEventListener('keypress', function(e) {
 // První zpráva AI po načtení stránky
 // -----------------------
 window.addEventListener('DOMContentLoaded', async () => {
-    const firstMessage = "Dobrý den, vítejte v kavárně CAIK! Rád vám pomohu s objednávkou.";
+    const firstMessage = "Dobrý den, jsem AI asistent Gastra-AI! Rád vám pomohu s objednávkou.";
     addMessage(firstMessage, "ai");
     conversationHistory.push({ role: "assistant", content: firstMessage });
 });
