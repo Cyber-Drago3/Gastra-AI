@@ -10,7 +10,7 @@ const sendBtn = document.getElementById('send-btn');
 // -----------------------
 // URL backendu (Render)
 // -----------------------
-const BACKEND_URL = "https://tvuj-backend.onrender.com"; // ← nahraď svou URL Render
+const BACKEND_URL = "https://gastra-ai.onrender.com"; // ← nahraď svou URL Render
 
 // -----------------------
 // Historie konverzace včetně menu
