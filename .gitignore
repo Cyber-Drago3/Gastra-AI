@@ -1,0 +1,11 @@
+# Ignorování node_modules
+node_modules/
+server/node_modules/
+
+# Ignorování souborů s citlivými údaji
+.env
+server/.env
+
+# Systémové soubory (Mac, Windows)
+.DS_Store
+Thumbs.db
