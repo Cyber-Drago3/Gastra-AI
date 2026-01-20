@@ -1,0 +1,133 @@
+/* Základní nastavení */
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    max-width: 720px;
+    margin: 40px auto;
+    padding: 16px;
+    background: linear-gradient(135deg, #f9f9f9, #e6ebf2); /* světlé pozadí */
+    color: #0d1b3d; /* tmavě modrá text */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #0d1b3d;
+}
+
+/* Chat okno */
+.chat-window {
+    border: 1px solid #ccd6e0; /* jemnější modrý tón místo šedé */
+    padding: 12px;
+    height: 420px;
+    overflow-y: auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+/* Zprávy */
+.chat-message {
+    margin: 8px 0;
+    padding: 10px 14px;
+    border-radius: 16px;
+    max-width: 75%;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+/* Zpráva uživatele */
+.chat-message.user {
+    background: linear-gradient(135deg, #0d1b3d, #1b2a66); /* tmavě modrá gradient */
+    color: #ffffff; /* bílý text pro kontrast */
+    text-align: right;
+    margin-left: auto;
+}
+
+/* Zpráva AI */
+.chat-message.ai {
+    background-color: #e1e6f0; /* světlé modré pozadí */
+    color: #0d1b3d; /* tmavě modrá pro text */
+    text-align: left;
+    margin-right: auto;
+}
+
+/* Vstup */
+#user-input {
+    width: calc(100% - 120px);
+    padding: 12px;
+    margin-top: 12px;
+    border-radius: 10px;
+    border: 1px solid #0d1b3d; /* tmavě modrá hranice */
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+#user-input:focus {
+    outline: none;
+    border-color: #0d1b3d;
+    box-shadow: 0 0 0 2px rgba(13, 27, 61, 0.2);
+}
+
+/* Tlačítko */
+#send-btn {
+    width: 110px;
+    padding: 12px;
+    margin-top: 12px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(135deg, #0d1b3d, #1b2a66); /* tmavě modrá gradient */
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+#send-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#send-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Footer / disclaimer */
+footer {
+    max-width: 720px;
+    margin: 30px auto 0;
+    padding: 12px 16px;
+    font-size: 0.75em;
+    color: #666666;
+    text-align: center;
+    line-height: 1.4;
+    border-top: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+footer p {
+    margin: 6px 0;
+}
+
+/* Mobilní styl */
+@media (max-width: 600px) {
+    .chat-window {
+        height: 60vh;
+    }
+
+    .chat-message {
+        max-width: 90%;
+    }
+
+    #user-input {
+        width: calc(100% - 100px);
+    }
+
+    #send-btn {
+        width: 90px;
+    }
+}
